@@ -131,4 +131,6 @@ footer {
   width: 560px;
   height: 315px;
   max-width: 100%;
+  margin: auto;
+  display: block;
 }
