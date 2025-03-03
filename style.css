@@ -127,6 +127,10 @@ footer {
   margin: auto;
 }
 
+.margin-bottom-2rem {
+  margin-bottom: 2rem;
+}
+
 #outer-science {
   width: 560px;
   height: 315px;
