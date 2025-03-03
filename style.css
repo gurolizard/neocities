@@ -1,30 +1,121 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
+/* CSS reset - modified from Andy Bell */
+/* https://piccalil.li/blog/a-more-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select,
+option {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* end CSS reset */
+
 
 body {
   background-color: black;
   color: yellow;
   font-family: 'MS Gothic', Verdana, Tahoma, sans-serif;
+  padding: 1.5rem;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
   margin: auto;  
   max-width: 80ch;
+  flex-grow: 1;
 }
 
 h1, h2, h3 {
   text-align: center;
   font-family: 'Finger Paint', 'MS Gothic', Verdana, Tahoma, sans-serif;
-  font-weight: 500;
+  font-weight: normal;
+  margin: 1rem;
+}
+
+h1 {
+  font-family: Shizuru, 'Finger Paint', 'MS Gothic', Verdana, Tahoma, sans-serif;
+  font-size: 270%;
+  margin: 2rem;
 }
 
 details {
  margin: 1rem; 
 }
 
+p {
+  margin: 1rem auto;
+}
+
 a {
  color: red; 
+}
+
+footer {
+  font-size: 85%;
+  margin: auto;
+  text-align: center;
 }
 
 .large {
@@ -34,4 +125,10 @@ a {
 .centered {
   text-align: center;
   margin: auto;
+}
+
+#outer-science {
+  width: 560px;
+  height: 315px;
+  max-width: 100%;
 }
