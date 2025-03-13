@@ -118,6 +118,11 @@ footer {
   text-align: center;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .large {
   font-size: 270%;
 }
@@ -137,4 +142,10 @@ footer {
   max-width: 100%;
   margin: auto;
   display: block;
+}
+
+@media screen and (min-width: 700px) {
+  .flex-container {
+    flex-direction: row;
+  }
 }
