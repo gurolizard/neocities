@@ -144,16 +144,29 @@ footer {
   display: block;
 }
 
-@media screen and (min-width: 700px) {
+.toots {
+  list-style-type: none;
+  font-size: 85%;
+}
+
+a.user {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
   .flex-container {
     flex-direction: row;
   }
 
-  .flex-container:first-child {
+  .flex-container section:first-child {
     max-width: 80ch;
   }
 
+  .flex-container section:last-child {
+    width: 30ch;
+  }
+
   main {
-    max-width: unset;
+    max-width: 100%;
   }
 }
