@@ -148,4 +148,12 @@ footer {
   .flex-container {
     flex-direction: row;
   }
+
+  .flex-container:first-child {
+    max-width: 80ch;
+  }
+
+  main {
+    max-width: unset;
+  }
 }
