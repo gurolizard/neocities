@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
 
   // This defines which files will be copied
-  eleventyConfig.setTemplateFormats(["html", "njk", "txt", "js", "css", "xml", "json"]);
+  // eleventyConfig.setTemplateFormats(["html", "njk", "txt", "js", "css", "xml", "json"]);
 
   // This defines the input and output directories
   return {
