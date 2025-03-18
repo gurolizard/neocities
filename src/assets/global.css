@@ -144,6 +144,11 @@ footer {
   display: block;
 }
 
+iframe {
+  margin: auto;
+  display: block;
+}
+
 .toots {
   list-style-type: none;
   font-size: 85%;
@@ -152,6 +157,9 @@ footer {
 a.user {
   display: none;
 }
+
+
+/* media queries */
 
 @media screen and (min-width: 800px) {
   .flex-container {

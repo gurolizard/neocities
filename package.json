@@ -1,12 +1,12 @@
 {
   "name": "gurolizard",
   "version": "1.0.0",
+  "author": "gurolizard",
   "description": "gay lil personal site",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gurolizard/neocities.git"
   },
-  "author": "gurolizard",
   "bugs": {
     "url": "https://github.com/gurolizard/neocities/issues"
   },
@@ -15,6 +15,7 @@
     "@11ty/eleventy": "^3.0.0"
   },
   "scripts": {
-    "build": "npx @11ty/eleventy"
+    "build": "npx @11ty/eleventy",
+    "dev": "npx @11ty/eleventy --serve"
   }
 }
