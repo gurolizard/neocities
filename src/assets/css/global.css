@@ -79,7 +79,7 @@ textarea:not([rows]) {
   --color-text-primary: #ff0;
   --color-text-second: #ddd;
   --color-accent-1: #e5322e;
-  --color-accent-2: #f00;
+  --color-accent-2: #ff0;
   --color-accent-3: #9f3;
   --font-main: Mina, 'MS Gothic', Verdana, Geneva, Tahoma, sans-serif;
   --font-accent-1: 'Finger Paint', Mina, 'MS Gothic', Verdana, Tahoma, sans-serif;
@@ -98,15 +98,16 @@ body {
   color: var(--color-text-primary);
   font-family: var(--font-main);
   font-weight: 200;
-  padding: 1.5rem;
   display: flex;
   flex-direction: column;
+  padding: 0;
 }
 
 main {
   margin: auto;  
   max-width: 80ch;
   flex-grow: 1;
+  padding: 1.5rem;
 }
 
 section {
@@ -144,10 +145,43 @@ footer {
   text-align: center;
 }
 
+iframe {
+  margin: auto;
+  display: block;
+}
+
+
+
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.blinkies img {
+  width: 150px;
+  height: 20px;
+}
+
+.code {
+  font-family: var(--font-code);
+}
+
 .flex-container {
   display: flex;
   flex-direction: column;
 }
+
+.freezeframe, .ff-image {
+  vertical-align: unset;
+  margin: unset;
+}
+
+
+
+/* utility classes */
 
 .large {
   font-size: 270%;
@@ -162,23 +196,8 @@ footer {
   margin-bottom: 2rem;
 }
 
-#outer-science {
-  width: 560px;
-  height: 315px;
-  max-width: 100%;
-  margin: auto;
-  display: block;
-}
-
-iframe {
-  margin: auto;
-  display: block;
-}
-
-
-
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 /* source: https://webaim.org/techniques/css/invisiblecontent/ */
@@ -191,9 +210,19 @@ iframe {
   overflow:hidden;
 }
 
-.freezeframe, .ff-image {
-  vertical-align: unset;
-  margin: unset;
+.skip a {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+.skip a:focus {
+  position:static;
+  width:auto;
+  height:auto;
 }
 
 
@@ -207,6 +236,8 @@ iframe {
   right: 0px;
   z-index:1000;
   background-color: transparent;
+  margin: 0;
+  padding: 0;
 }
 
 #settings[open] {
@@ -234,13 +265,13 @@ background-color: var(--color-bg-second);
 #settings-toggle::before {
   width: 38px;
   height: 38px;
-  background-color:var(--color-accent-1);
+  background-color:var(--color-accent-2);
   background-image: url(/assets/img/settings.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 32px 32px;
   content: '';
-  border: solid 2px var(--color-accent-2);
+  border: solid 2px var(--color-bg-second);
   border-right: 0;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -260,7 +291,7 @@ background-color: var(--color-bg-second);
   content: 'close';
   text-decoration: underline;
   height: fit-content;
-  color: var(--color-text-primary);
+  color: var(--color-text-second);
   z-index: 1000;
   background: none;
   border: 0;
@@ -270,18 +301,18 @@ background-color: var(--color-bg-second);
   font-size: 1rem;
   font-family: var(--font-main);
   font-weight: bold;
-  color: var(--color-text-second);
+  color: var(--color-accent-1);
   margin-top: 0.5rem;
 }
 
 #settings-menu a {
-  color: var(--color-text-second);
+  color: var(--color-text-primary);
 }
 
 .settings-button {
   display: block;
   background-color: transparent;
-  color: var(--color-text-second);
+  color: var(--color-text-primary);
   text-decoration: underline;
   cursor: pointer;
   border: 0;
@@ -299,6 +330,14 @@ background-color: var(--color-bg-second);
 
 
 /* home page */
+
+#outer-science {
+  width: 560px;
+  height: 315px;
+  max-width: 100%;
+  margin: auto;
+  display: block;
+}
 
 .toots {
   list-style-type: none;
