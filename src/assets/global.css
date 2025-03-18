@@ -71,6 +71,21 @@ textarea:not([rows]) {
 /* end CSS reset */
 
 
+/* variables */
+
+:root {
+  --color-bg-primary: #000;
+  --color-bg-second: #222;
+  --color-text-primary: #ff0;
+  --color-text-second: #ddd;
+  --color-accent-1: #e5322e;
+  --color-accent-2: #f00;
+  --color-accent-3: #9f3;
+  --font-main: Mina, 'MS Gothic', Verdana, Geneva, Tahoma, sans-serif;
+  --font-accent-1: 'Finger Paint', Mina, 'MS Gothic', Verdana, Tahoma, sans-serif;
+  --font-accent-2: Shizuru, 'Finger Paint', Mina, 'MS Gothic', Verdana, Tahoma, sans-serif;
+  --font-code: 'Courier New', Courier, monospace;
+}
 
 
 
@@ -79,9 +94,9 @@ textarea:not([rows]) {
 /* main styles */
 
 body {
-  background-color: black;
-  color: yellow;
-  font-family: 'Mina', 'MS Gothic', Verdana, Tahoma, sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-main);
   font-weight: 200;
   padding: 1.5rem;
   display: flex;
@@ -100,13 +115,13 @@ section {
 
 h1, h2, h3 {
   text-align: center;
-  font-family: 'Finger Paint', Mina, 'MS Gothic', Verdana, Tahoma, sans-serif;
+  font-family: var(--font-accent-1);
   font-weight: normal;
   margin: 1rem;
 }
 
 h1 {
-  font-family: Shizuru, 'Finger Paint', Mina, 'MS Gothic', Verdana, Tahoma, sans-serif;
+  font-family: var(--font-accent-2);
   font-size: 270%;
   margin: 2rem;
 }
@@ -120,7 +135,7 @@ p {
 }
 
 a {
- color: red; 
+ color: var(--color-accent-1); 
 }
 
 footer {
