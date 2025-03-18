@@ -71,12 +71,19 @@ textarea:not([rows]) {
 /* end CSS reset */
 
 
+
+
+
+
+
+/* main styles */
+
 body {
   background-color: black;
   color: yellow;
-  font-family: 'MS Gothic', Verdana, Tahoma, sans-serif;
+  font-family: 'Mina', 'MS Gothic', Verdana, Tahoma, sans-serif;
+  font-weight: 200;
   padding: 1.5rem;
-  font-size: 1.2em;
   display: flex;
   flex-direction: column;
 }
@@ -87,15 +94,19 @@ main {
   flex-grow: 1;
 }
 
+section {
+  margin: 2rem 1rem;
+}
+
 h1, h2, h3 {
   text-align: center;
-  font-family: 'Finger Paint', 'MS Gothic', Verdana, Tahoma, sans-serif;
+  font-family: 'Finger Paint', Mina, 'MS Gothic', Verdana, Tahoma, sans-serif;
   font-weight: normal;
   margin: 1rem;
 }
 
 h1 {
-  font-family: Shizuru, 'Finger Paint', 'MS Gothic', Verdana, Tahoma, sans-serif;
+  font-family: Shizuru, 'Finger Paint', Mina, 'MS Gothic', Verdana, Tahoma, sans-serif;
   font-size: 270%;
   margin: 2rem;
 }
@@ -156,6 +167,12 @@ iframe {
 
 a.user {
   display: none;
+}
+
+.big-emoji {
+  display: inline;
+  height: 100px;
+  width: auto;
 }
 
 
